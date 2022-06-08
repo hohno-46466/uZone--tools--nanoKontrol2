@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 #
 # nanoKONTROL2.sh
