@@ -5,8 +5,8 @@
 #
 
 # First version: Mon Jul  1 23:33:46 JST 2019
-# Last updated: Sun Sep  1 00:14:20 JST 2019
-# Last updated: Mon Sep  2 13:25:13 JST 2019
+# Last update: Sun Sep  1 00:14:20 JST 2019
+# Last update: Mon Sep  2 13:25:13 JST 2019
 
 # amidi のダンプ出力を読み取り，イベント発生時のスライダ、ボリューム、S/M/Rスイッチの状況を出力する
 
