@@ -7,9 +7,10 @@ shell scripts for controlling KORG nanoKontrol2 on POSIX environment
     ./uZone--tools--nanoKontrol2
      ├──  README.md
      ├──  README.md.old
-     └──  nanoKONTROL2.sh
+     ├──  nanoKONTROL2.sh
+     └──  nanoKONTROL2.sh.bak
      
-     0 directories, 3 files (Sun Nov 20 00:11:41 JST 2022)
+     0 directories, 4 files (Mon Dec 19 23:54:37 JST 2022)
 
 
 Note: URL = https://github.com/hohno-46466/uZone--tools--nanoKontrol2
