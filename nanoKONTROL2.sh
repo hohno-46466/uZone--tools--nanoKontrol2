@@ -1,12 +1,12 @@
 #!/bin/sh
 
-#
 # nanoKONTROL2.sh
 #
 
 # First version: Mon Jul  1 23:33:46 JST 2019
-# Last update: Sun Sep  1 00:14:20 JST 2019
-# Last update: Mon Sep  2 13:25:13 JST 2019
+# Prev update: Sun Sep  1 00:14:20 JST 2019
+# Prev update: Mon Sep  2 13:25:13 JST 2019
+# Last update: Mon Apr  1 11:18:07 JST 2024
 
 # amidi のダンプ出力を読み取り，イベント発生時のスライダ、ボリューム、S/M/Rスイッチの状況を出力する
 
@@ -19,6 +19,8 @@
 # So these keys are tentatively assigned to the same role of the [CYCLE] button.
 
 # ----------------------------------------------------------
+
+HEADER="nanoKTRL2-1"
 
 gawk 'BEGIN {
     vflag = 1;  ## 直近に有効操作があったら 1, なければ 0
@@ -134,6 +136,9 @@ gawk 'BEGIN {
         prevApp = app;          ## 現在の app を保存
         vflag = 0;              ## 直近に有効操作なし
 
+        # printf("\n");
+        # fflush();
+
         ## 現状を出力
         ## （出力形式を変更したい場合は以下を修正すればよい）
         printf "%s:", app;
@@ -153,10 +158,14 @@ gawk 'BEGIN {
         printf " :", app;
 
         printf("\n");
-        ## fflush();
+        # fflush();
     }
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     fflush();
-}'
+
+}' | (TSKEY="$HEADER"; $HOME/bin/addts.sh)
+
+exit
+# ( sed -u -e 's/^/	/' -e 's/^/'$(date +%s.%3N)'/' -e 's/^/	/' -e 's/^/'$HEADER'/' )
