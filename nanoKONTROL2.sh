@@ -165,7 +165,7 @@ gawk 'BEGIN {
 
     fflush();
 
-}' | (TSKEY="$HEADER"; $HOME/bin/addts.sh)
+}' | (export TSKEY="$HEADER"; $HOME/bin/addts.sh)
 
 exit
 # ( sed -u -e 's/^/	/' -e 's/^/'$(date +%s.%3N)'/' -e 's/^/	/' -e 's/^/'$HEADER'/' )
